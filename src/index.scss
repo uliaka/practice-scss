@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+$background-color: #FEFEFE;
+$font-color: #0C0C0B;
+$nav-backg-color: #E96113;
+$nav-color: #FEFEFE;
+$body-backg-color: #F4ECCA;
+
+$font: 'Vollkorn';
+
+body {
+  background-color: $body-backg-color;
+  font-family: $font;
+  line-height: 2;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  background-color: $nav-backg-color;
+  color: $nav-color;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 100px;
+    position: relative;
+
+    .arrow::after {
+      content: '\276F';
+    }
+
+    .arrow {
+      font-size: 15px;
+      display: inline-block;
+      -ms-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      padding: 10px;
+    }
+
+    ul {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+
+      ul {
+        display: block;
+        background-color: $nav-backg-color;
+        position: absolute;
+      }
+
+      li {
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+      }
+    }
+  }
+}
