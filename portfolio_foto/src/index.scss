@@ -1,5 +1,6 @@
 $back-img: url(./img/photographer.png);
 $header-color: #FFFFFF;
+$container-color: #0F0E0E;
 
 body {
   margin: 0;
@@ -13,8 +14,7 @@ header {
   height: 600px;
 
   #menu {
-    padding-top: 15px;
-    padding-left: 10px;
+    padding: 15px;
     position: fixed;
 
     a {
@@ -26,13 +26,11 @@ header {
       margin-left: 10px;
       letter-spacing: 4px;
     }
-
   }
 
   .nav-white {
-    background-color: black;
+    background-color: #ffffff;
     width: 100%;
-    color: red;
   }
 
   .header-title {
@@ -57,4 +55,23 @@ header {
     }
   }
 
+}
+
+.container {
+  padding: 20px;
+
+  #about {
+   text-align: justify;
+   color: $container-color;
+
+   h3 {
+     font-style: italic;
+     letter-spacing: 3px;
+     text-align: center;
+   }
+   h1 {
+     text-transform: uppercase;
+     text-align: center;
+   }
+  }
 }
